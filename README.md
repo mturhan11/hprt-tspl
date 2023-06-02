@@ -13,12 +13,15 @@
 
 FOR USB
 =========================================
-Example 1: hprt -cusb -nLPQ58 -vid0x20d1 -pid0x7008 -P/temp/printfile.txt
-Example 2: hprt -cusb -a -P/temp/printfile.txt
+Example 1: 
+	hprt -cusb -nLPQ58 -vid0x20d1 -pid0x7008 -P/temp/printfile.txt
+Example 2: 
+	hprt -cusb -a -P/temp/printfile.txt
 
 FOR NETWORK
 =========================================
-Example 3: hprt -cnetwork -nLPQ58 -ip192.168.1.21,9100 -P/temp/printfile.txt
+Example 3: 
+	hprt -cnetwork -nLPQ58 -ip192.168.1.21,9100 -P/temp/printfile.txt
 
 
 SAMPLE BARCODE
