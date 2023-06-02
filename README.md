@@ -1,4 +1,20 @@
 # HPRT TSPL Print Tool v0.2
+
+HOW TO BUILD
+=======================================
+	cd ~/hprt-tspl/
+	make all
+	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "main.cpp"
+	cd Debug
+	g++  -o "hprt"  ./main.o   -ltspl_sdk
+	cp ~/hprt-tspl/Debug/hprt ~/hprt_1.0-1_amd64/usr/local/bin/hprt
+	cp ~/hprt-tspl/libs/x64/libtspl_sdk.so ~/hprt_1.0-1_amd64/usr/lib/libtspl_sdk.so
+	cd ~/
+	dpkg-deb --build --root-owner-group hprt_1.0-1_amd64
+
+
+USAGE
+========================================
 	-v			Show version
 	-h			Show help
 	-d			Show debug info
