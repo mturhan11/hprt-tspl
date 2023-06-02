@@ -9,6 +9,7 @@ HOW TO BUILD
 	g++  -o "hprt"  ./main.o   -ltspl_sdk
 	cp ~/hprt-tspl/Debug/hprt ~/hprt_1.0-1_amd64/usr/local/bin/hprt
 	cp ~/hprt-tspl/libs/x64/libtspl_sdk.so ~/hprt_1.0-1_amd64/usr/lib/libtspl_sdk.so
+	cp ~/hprt-tspl/DEBIAN/control ~/hprt_1.0-1_amd64/DEBIAN/control
 	cd ~/
 	dpkg-deb --build --root-owner-group hprt_1.0-1_amd64
 
