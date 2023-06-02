@@ -1,8 +1,4 @@
-# hprt-tspl
-
-=========================================
-= HPRT TSPL Print Tool v0.2             =
-=========================================
+# HPRT TSPL Print Tool v0.2
 	-v			Show version
 	-h			Show help
 	-d			Show debug info
@@ -34,13 +30,11 @@ OFFSET 10 mm
 SET PEEL OFF
 SET TEAR ON
 CLS
-TEXT 10,10,"3",0,1,1,"xxxx"
-BARCODE 200,40,"128",40,0,0,2,2,"55111364124"
-TEXT 10,35,"3",0,1,1,"xxx"
-TEXT 10,60,"3",0,1,1,"1234567890"
+TEXT 10,10,"3",0,1,1,"FIRST LINE"
+BARCODE 200,40,"128",40,0,0,2,2,"0000000000"
+TEXT 10,35,"3",0,1,1,"SECOND LINE"
+TEXT 10,60,"3",0,1,1,"0000000000"
 TEXT 10,85,"3",0,1,1,"F / 12"
-TEXT 10,110,"3",0,1,1,"sadsda"
-TEXT 10,135,"3",0,1,1,"asdasdad"
-TEXT 10,160,"3",0,1,1,"asdad"
-TEXT 10,185,"3",0,1,1,"asdasd"
+TEXT 10,110,"3",0,1,1,"THIRD LINE"
+TEXT 10,135,"3",0,1,1,"FOURTH LINE"
 PRINT 1,1
