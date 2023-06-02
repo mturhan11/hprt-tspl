@@ -1,0 +1,7 @@
+Package: hprt
+Version: 1.0
+Depends: libusb-1.0-0, libusb-1.0-0-dev
+Architecture: amd64
+Maintainer: Mustafa Turhan <info@entsis.com>
+Homepage: http://www.entsis.com/
+Description: TSPL print tool for HPRT printers.
