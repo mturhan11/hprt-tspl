@@ -187,7 +187,6 @@ int main(int argc, char *argv[])
     		    	        result = TSPL_SetTear(phandle,1);
     		    	        result = TSPL_SetCodePage(phandle,codePage);
     		    	        result = TSPL_Direction(phandle,1);
-    		    	        //result = TSPL_Text(phandle, 10, 0, 3, 0, 1, 1, "Bilecik Agiz Ve Dis Sagligi Merkezi Binasi");
 
     		    	        for (int j = 0; j < FileLineCount; j++)
     		    	        {
@@ -206,7 +205,6 @@ int main(int argc, char *argv[])
     		    	        	}
     		    	        	if (strstr(FileLines[j],"TEXT")!=NULL)
     		    	            {
-    		    	        		//printf("%s",strstr(FileLines[j],"TEXT"));
     		    	        		char *StringText = strstr(FileLines[j],"TEXT");
     		    	        		char *Text[48];
     		    	        		int x=0;
@@ -230,7 +228,6 @@ int main(int argc, char *argv[])
     		    	            }
     		    	        	if (strstr(FileLines[j],"BARCODE")!=NULL)
     		    	        	{
-    		    	        	    //printf("%s",strstr(FileLines[j],"BARCODE"));
     		    	        	    char *StringBarcode = strstr(FileLines[j],"BARCODE");
     		    	        	    char *Barcode[48];
     		    	        	    int x=0;
@@ -245,7 +242,6 @@ int main(int argc, char *argv[])
     		    	        	    int BarcodeInt[x];
     		    	        	    for (int y = 0; y < x; y++)
     		    	        	    {
-    		    	        	    	//printf("%s \n\n",Barcode[y]);
     		    	        	    	sscanf(Barcode[y], "%d",&BarcodeInt[y]);
     		    	        	    }
 
@@ -254,35 +250,9 @@ int main(int argc, char *argv[])
 											BarcodeInt[6],BarcodeInt[7],Barcode[8]);
     		    	        	}
     		    	        }
-    		    	        /*result = TSPL_Text(phandle, 10,25,3,0,1,1,"ELANUR KILIC");
-    		    	        result = TSPL_Text(phandle, 10,50,3,0,1,1,"55111364124");
-    		    	        result = TSPL_Text(phandle, 10,75,3,0,1,1,"KADIN / 12 yil 9 ay");
-    		    	        result = TSPL_Text(phandle, 10,100,3,0,1,1,"Hekim: SAMIRE SEZGIN");
-    		    	        result = TSPL_Text(phandle, 10,125,3,0,1,1,"Poliklinik - Samire SEZGIN - (Nobet)(Adsm)");
-    		    	        result = TSPL_Text(phandle, 10,150,3,0,1,1,"Tarih: 11.04.2021 14:23");
-    		    	        result = TSPL_Text(phandle, 10,175,3,0,1,1,"Vaka : Normal");
-*/
+							
     		    	        result = TSPL_Print(phandle, 1, 1);
 
-    		    	        /*
-    		    	        SIZE 58 mm, 25 mm
-    		    	        DIRECTION 1,0
-    		    	        REFERENCE 0,0
-    		    	        OFFSET 0 mm
-    		    	        SET PEEL OFF
-    		    	        SET TEAR ON
-    		    	        CLS
-    		    	        TEXT 10,0,"3",0,1,1,"Bilecik Agiz Ve Dis Sagligi Merkezi Binasi"
-    		    	        BARCODE 200,30,"128",60,0,0,2,2,"55111364124"
-    		    	        TEXT 10,25,"3",0,1,1,"ELANUR KILIC"
-    		    	        TEXT 10,50,"3",0,1,1,"55111364124"
-    		    	        TEXT 10,75,"3",0,1,1,"KADIN / 12 yil 9 ay"
-    		    	        TEXT 10,100,"3",0,1,1,"Hekim: SAMIRE SEZGIN"
-    		    	        TEXT 10,125,"3",0,1,1,"Poliklinik - Samire SEZGIN - (Nobet)(Adsm)"
-    						TEXT 10,150,"3",0,1,1,"Tarih: 11.04.2021 14:23"
-    						TEXT 10,175,"3",0,1,1,"Vaka : Normal"
-    						PRINT 1,1
-    						*/
     		    	    }
     		    	    result = PortClose(phandle);
     		    	    result = PrinterDestroy(phandle);
